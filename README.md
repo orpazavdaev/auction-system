@@ -1,4 +1,4 @@
-# Creditly
+# Accounts & Auctions Management System
 
 This project is a monorepo for a lending workflow prototype: **internal staff manage accounts and auctions**, while bankers participate in blind rate auctions without receiving customer-identifying data through the public API. The stack is Express + Prisma + PostgreSQL (API) and Next.js App Router (web), with an in-process event bus for reactions after persisted `Event` rows (account audit trail) and related bus notifications.
 
@@ -271,7 +271,7 @@ Together, RBAC is **defense in depth**: route guards for coarse role boundaries,
 
 ## Blind auction model
 
-The **blind** auction model was chosen to ensure fairness and reduce bias between participants by preventing them from seeing each other’s offers during the bidding process. This approach encourages more **realistic and independent pricing**, since each user submits their offer without being influenced by competitors’ bids or strategic manipulation. In the context of Creditly, where financial decisions and account evaluations are involved, this model helps create a more objective and trustworthy selection process for the winning offer, while also simplifying the logic of comparison since all bids are revealed only at the decision stage.
+The **blind** auction model was chosen to ensure fairness and reduce bias between participants by preventing them from seeing each other’s offers during the bidding process. This approach encourages more **realistic and independent pricing**, since each user submits their offer without being influenced by competitors’ bids or strategic manipulation. Where financial decisions and account evaluations are involved, this model helps create a more objective and trustworthy selection process for the winning offer, while also simplifying the logic of comparison since all bids are revealed only at the decision stage.
 
 **What bankers see**
 
